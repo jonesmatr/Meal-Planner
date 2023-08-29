@@ -1,0 +1,25 @@
+<h2>Your Projects</h2>
+{{#each projects}}
+<div class="project-card">
+    <h3>{{name}}</h3>
+    <p>{{description}}</p>
+    <p>Needed Funding: ${{needed_funding}}</p>
+    <form action="/api/projects/{{id}}" method="post">
+        <button type="submit">Delete Project</button>
+    </form>
+</div>
+{{/each}}
+
+<h2>Add a New Project</h2>
+<form action="/api/projects" method="post">
+    <label for="name">Project Name:</label>
+    <input type="text" name="name" required>
+    
+    <label for="description">Description:</label>
+    <textarea name="description" required></textarea>
+    
+    <label for="needed_funding">Needed Funding ($):</label>
+    <input type="number" name="needed_funding" required>
+    
+    <button type="submit">Add Project</button>
+</form>

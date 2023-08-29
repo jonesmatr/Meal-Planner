@@ -1,0 +1,9 @@
+{{#each projects}}
+<div class="project-card">
+    <h2>{{name}}</h2>
+    <p>{{description}}</p>
+    <p>Needed Funding: ${{needed_funding}}</p>
+    <p>Posted by: {{User.name}}</p>
+    <a href="/project/{{id}}">View Details</a>
+</div>
+{{/each}}
