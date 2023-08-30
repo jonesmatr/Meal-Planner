@@ -27,7 +27,7 @@ const newFormHandler = async (event) => {
     event.preventDefault();
 
      // New fields
-  const mealName = document.querySelector('#project-name').value.trim();
+  const mealName = document.querySelector('#meal-name').value.trim();
   const dayOfWeek = document.querySelector('#day-of-week').value.trim();
   const recipe = document.querySelector('#meal-desc').value.trim();
 
@@ -71,6 +71,6 @@ const newFormHandler = async (event) => {
     .addEventListener('click', delButtonHandler);
 
     // New Meal Plan Form Handler
-    document
-    .querySelector('.new-meal-form')
-    .addEventListener('submit', newMealFormHandler);
+document
+  .querySelector('.new-meal-form')
+  .addEventListener('submit', newMealFormHandler);
