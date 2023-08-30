@@ -23,10 +23,10 @@ Project.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    day_of_week: {
-      type: DataTypes.STRING,
-      allowNull: false,      
-  },
+    needed_funding: {
+      type: DataTypes.FLOAT,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
