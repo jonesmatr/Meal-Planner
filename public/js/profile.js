@@ -61,16 +61,18 @@ const newFormHandler = async (event) => {
       }
     }
   };
-  
-  document
-    .querySelector('.new-project-form')
-    .addEventListener('submit', newFormHandler);
-  
-  document
-    .querySelector('.project-list')
-    .addEventListener('click', delButtonHandler);
 
-    // New Meal Plan Form Handler
-document
-  .querySelector('.new-meal-form')
-  .addEventListener('submit', newMealFormHandler);
+// Attach the form submit event to the newProjectFormHandler function
+if (document.querySelector('.new-project-form')) {
+    document.querySelector('.new-project-form').addEventListener('submit', newFormHandler);
+  }
+  
+  // Attach the delete button click event to the delButtonHandler function
+  if (document.querySelector('.project-list')) {
+    document.querySelector('.project-list').addEventListener('click', delButtonHandler);
+  }
+  
+  // Attach the form submit event to the newMealFormHandler function
+  if (document.querySelector('.new-meal-form')) {
+    document.querySelector('.new-meal-form').addEventListener('submit', newMealFormHandler);
+  }
