@@ -25,10 +25,7 @@ Project.init(
     },
     needed_funding: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        notNull: true,
-    },
+      allowNull: false,      
   },
     user_id: {
       type: DataTypes.INTEGER,
