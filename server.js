@@ -9,7 +9,7 @@ const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
-const PORT = process.env.PORT || 3002; // Use a different port, like 3002
+const PORT = process.env.PORT || 3001; // Use a different port, like 3002
 
 
 // Set up Handlebars.js engine with custom helpers
