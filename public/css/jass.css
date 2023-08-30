@@ -28,6 +28,15 @@ main {
   display: block;
 }
 
+/* Add this to your existing CSS file */
+.custom-login-link {
+  font-size: 24px;  /* Change the font size */
+  padding: 10px;    /* Add some padding */
+  padding-right: 82px;
+  color: rgb(97, 97, 226);      /* Change the text color */
+}
+
+
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -71,6 +80,11 @@ pre {
 a {
   background-color: transparent;
 }
+
+header {
+  background-color: #a1d5ac35; /* Change to your desired color */
+}
+
 
 /**
  * 1. Remove the bottom border in Chrome 57-
