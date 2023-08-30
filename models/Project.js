@@ -34,6 +34,18 @@ Project.init(
         key: 'id',
       },
     },
+    meal_name: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    day_of_week: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    recipe: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
   },
   {
     sequelize,

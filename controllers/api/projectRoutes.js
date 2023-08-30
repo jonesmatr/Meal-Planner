@@ -6,6 +6,12 @@ router.post('/', withAuth, async (req, res) => {
   try {
     const newProject = await Project.create({
       ...req.body,
+      name: req.body.name,
+      needed_funding: req.body.needed_funding,
+      description: req.body.description,
+      meal_name: req.body.meal_name,  // New field
+      day_of_week: req.body.day_of_week,  // New field
+      recipe: req.body.recipe,  // New field
       user_id: req.session.user_id,
     });
 
