@@ -6,16 +6,26 @@
 
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Create a New Project:</h3>
+    <h3>Create a Meal Plan:</h3>
 
     <form class="form new-project-form">
       <div class="form-group">
-        <label for="project-name">project name:</label>
+        <label for="project-name">Meal Name:</label>
         <input class="form-input" type="text" id="project-name" name="project-name" />
       </div>
       <div class="form-group">
-        <label for="project-funding">needed funding ($):</label>
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
+        {{!-- <label for="project-funding">needed funding ($):</label> --}}
+        <label for="day-of-week">Select a Day of the Week:</label>
+          <select class="form-input" id="day-of-week" name="day-of-week">
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="saturday">Saturday</option>
+            <option value="sunday">Sunday</option>
+          </select>
+        {{!-- <input class="form-input" type="number" id="project-funding" name="project-funding" /> --}}
       </div>
       <div class="form-group">
         <label for="project-desc">description:</label>
