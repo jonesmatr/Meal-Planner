@@ -11,7 +11,7 @@ router.post('/', withAuth, async (req, res) => {
       description: req.body.description,
       meal_name: req.body.meal_name,  // New field
       day_of_week: req.body.day_of_week,  // New field
-      recipe: req.body.recipe,  // New field
+      recipe: req.body.recipe,  // New field to form
       user_id: req.session.user_id,
     });
 
