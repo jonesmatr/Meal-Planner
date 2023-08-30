@@ -23,7 +23,7 @@ Project.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
+    day_of_week: {
       type: DataTypes.STRING,
       allowNull: false,      
   },
