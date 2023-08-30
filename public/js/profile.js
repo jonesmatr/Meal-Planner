@@ -5,7 +5,7 @@ const newFormHandler = async (event) => {
     const selectedDay = document.querySelector('#day-of-week').value.trim();
     const description = document.querySelector('#project-desc').value.trim();
   
-    if (name && needed_funding && description) {
+    if (name && selectedDay && description) {
       const response = await fetch(`/api/projects`, {
         method: 'POST',
         body: JSON.stringify({ name, day_of_week: selectedDay, description }), // Update field name to 'day_of_week'
