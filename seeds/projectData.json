@@ -1,17 +1,17 @@
 [
   {
-    "name": "Music Near Me",
-    "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-    "needed_funding": 5000
+    "name": "Pasta Night",
+    "description": "Spaghetti with marinara sauce, garlic bread, and a side salad",
+    "day_of_week": "Wednesday"
   },
   {
-    "name": "The Ultimate Tech Quiz",
-    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-    "needed_funding": 10000
+    "name": "Pizza Friday",
+    "description": "Pepperoni, cheese, tomato sauce, green peppers, and mushrooms on a delicious crust",
+    "day_of_week": "Friday"
   },
   {
-    "name": "Roll 'Em Up",
-    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-    "needed_funding": 800
+    "name": "Sushi Saturday",
+    "description": "Assorted sushi rolls with fresh fish, avocado, cucumber, and seaweed",
+    "day_of_week": "Saturday"
   }
 ]
