@@ -1,26 +1,26 @@
-// const newFormHandler = async (event) => {
-//     event.preventDefault();
+const newFormHandler = async (event) => {
+    event.preventDefault();
   
-//     const name = document.querySelector('#project-name').value.trim();
-//     const needed_funding = document.querySelector('#project-funding').value.trim();
-//     const description = document.querySelector('#project-desc').value.trim();
+    const name = document.querySelector('#project-name').value.trim();
+    const needed_funding = document.querySelector('#project-funding').value.trim();
+    const description = document.querySelector('#project-desc').value.trim();
 
-//     if (name && needed_funding && description) {
-//         const response = await fetch(`/api/projects`, {
-//           method: 'POST',
-//           body: JSON.stringify({ name, needed_funding, description }),
-//           headers: {
-//             'Content-Type': 'application/json',
-//           },
-//         });
+    if (name && needed_funding && description) {
+        const response = await fetch(`/api/projects`, {
+          method: 'POST',
+          body: JSON.stringify({ name, needed_funding, description }),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
     
-//         if (response.ok) {
-//           document.location.replace('/profile');
-//         } else {
-//           alert('Failed to create project');
-//         }
-//       }
-//     };
+        if (response.ok) {
+          document.location.replace('/profile');
+        } else {
+          alert('Failed to create project');
+        }
+      }
+    };
 
     // New Meal Plan Form Handler
     const newMealFormHandler = async (event) => {
@@ -63,16 +63,16 @@
   };
 
 // Attach the form submit event to the newProjectFormHandler function
-// if (document.querySelector('.new-project-form')) {
-//     document.querySelector('.new-project-form').addEventListener('submit', newFormHandler);
-//   }
-  
-  // Attach the delete button click event to the delButtonHandler function
-  if (document.querySelector('.project-list')) {
-    document.querySelector('.project-list').addEventListener('click', delButtonHandler);
-  }
-  
-  // Attach the form submit event to the newMealFormHandler function
-  if (document.querySelector('.new-meal-form')) {
-    document.querySelector('.new-meal-form').addEventListener('submit', newMealFormHandler);
-  }
+if (document.querySelector('.new-project-form')) {
+  document.querySelector('.new-project-form').addEventListener('submit', newFormHandler);
+}
+
+// Attach the delete button click event to the delButtonHandler function
+if (document.querySelector('.project-list')) {
+  document.querySelector('.project-list').addEventListener('click', delButtonHandler);
+}
+
+// Attach the form submit event to the newMealFormHandler function
+if (document.querySelector('.new-meal-form')) {
+  document.querySelector('.new-meal-form').addEventListener('submit', newMealFormHandler);
+}
