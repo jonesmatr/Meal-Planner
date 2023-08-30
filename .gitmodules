@@ -1,0 +1,3 @@
+[submodule "meal-metrics-submodule"]
+	path = meal-metrics-submodule
+	url = https://github.com/jonesmatr/Meal-Metrics.git
