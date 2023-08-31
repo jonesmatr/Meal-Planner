@@ -456,8 +456,26 @@ END NORMALIZE CSS
 }
 
 html,
+
 body {
   min-height: 100%;
+}
+
+.main-page::before {
+  content: "";
+  position: fixed; /* Fixed position */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1; /* Sit behind the content */
+
+  background-image: url('../img/front-pagebgimg.jpg');
+  background-size: 50%; /* You can adjust this value to make the image smaller or larger */
+  background-position: right center;
+  background-repeat: no-repeat;
+
+  opacity: 0.6; /* 60% opacity */
 }
 
 body {
@@ -467,6 +485,8 @@ body {
   font-size: 16px;
   color: #1a1a1a;
 }
+
+
 
 h1,
 h2,
