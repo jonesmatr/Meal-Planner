@@ -62,3 +62,5 @@ header, .project:not(:last-child) {
     position: relative;
     z-index: 2;  /* Higher than the main content */
   }
+
+  
