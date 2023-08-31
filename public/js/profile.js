@@ -32,9 +32,18 @@
   const recipe = document.querySelector('#meal-desc').value.trim();
 
   if (mealName && dayOfWeek && recipe) {
+    // const response = await fetch(`/api/projects`, {
+    //   method: 'POST',
+    //   body: JSON.stringify({ meal_name: mealName, day_of_week: dayOfWeek, recipe }),
+    //   headers: { 'Content-Type': 'application/json' },
+    // });
     const response = await fetch(`/api/projects`, {
       method: 'POST',
-      body: JSON.stringify({ meal_name: mealName, day_of_week: dayOfWeek, recipe }),
+      body: JSON.stringify({ 
+        meal_name: document.querySelector('#meal-name').value.trim(), 
+        day_of_week: document.querySelector('#day-of-week').value.trim(), 
+        recipe: document.querySelector('#meal-desc').value.trim() 
+      }),
       headers: { 'Content-Type': 'application/json' },
     });
 
