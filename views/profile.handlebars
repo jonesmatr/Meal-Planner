@@ -57,7 +57,7 @@
       </div>
     </form>
 
-  {{#if projects.length}}
+  {{!-- {{#if projects.length}}
   <div class="col-md-6 project-list">
     <h3>Current Projects:</h3>
 
@@ -73,26 +73,26 @@
     {{/each}}
   </div>
   {{/if}}
-</div>
+</div> --}}
 
-{{!-- {{#if meal_plans.length}}
-  <div class="col-md-6 meal-plan-list">
+{{#if projects.length}}
+  <div class="col-md-6 project-list">
     <h3>Current Meal Plans:</h3>
 
-    {{#each meal_plans as |meal_plan|}}
+    {{#each projects as |project|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/meal_plan/{{meal_plan.id}}">{{meal_plan.name}}</a></h4>
-        <p>Day: {{meal_plan.day_of_week}}</p>
-        <p>Recipe: {{meal_plan.recipe}}</p>
+        <h4><a href="/project/{{project.id}}">{{project.meal_name}}</a></h4>
+        <p>Day: {{project.day_of_week}}</p>
+        <p>Recipe: {{project.recipe}}</p>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{meal_plan.id}}">DELETE</button>
+        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
       </div>
     </div>
     {{/each}}
   </div>
-{{/if}} --}}
+{{/if}}
 
 <script src="./js/profile.js"></script>
 

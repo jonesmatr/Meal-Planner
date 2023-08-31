@@ -63,9 +63,9 @@
   };
 
 // Attach the form submit event to the newProjectFormHandler function
-if (document.querySelector('.new-project-form')) {
-  document.querySelector('.new-project-form').addEventListener('submit', newFormHandler);
-}
+// if (document.querySelector('.new-project-form')) {
+//   document.querySelector('.new-project-form').addEventListener('submit', newFormHandler);
+// }
 
 // Attach the delete button click event to the delButtonHandler function
 if (document.querySelector('.project-list')) {
