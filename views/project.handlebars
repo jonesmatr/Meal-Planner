@@ -1,15 +1,15 @@
 <div class="text-center">
-  <h2>{{name}}</h2>
+  <h2>{{meal_name}}</h2>
   <p>{{{get_emoji}}}</p>
-  <p>{{description}}</p>
+  <p>{{recipe}}</p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
   <p>
-    <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
+    <span for="img" aria-label="money">🍔</span>
+    <span class="dollar-amount">{{day_of_week}}</span>
     needed
   </p>
   <p>
-    <button class="btn btn-primary">Fund this Project!</button>
+    <button class="btn btn-primary">Make this for dinner tonight!</button>
   </p>
 </div>
 
