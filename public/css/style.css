@@ -25,10 +25,10 @@ header, .project:not(:last-child) {
   }
   
 
-  .fading-corners {
+  /* .fading-corners {
     border-radius: 15px;
     box-shadow: 0 0 6px 6px rgba(251, 251, 251, 0.851);
-  }
+  } */
 
   .main-page::before {
     content: "";
