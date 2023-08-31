@@ -18,9 +18,10 @@ router.get('/', async (req, res) => {
     const projects = projectData.map((project) => project.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', { 
+     res.render('homepage', { 
       projects, 
-      logged_in: req.session.logged_in 
+      logged_in: req.session.logged_in,
+      is_main_page: true  // THIS LINE IS TO MODIFY THE BG IMAGE IN HOME PAGE
     });
   } catch (err) {
     res.status(500).json(err);
