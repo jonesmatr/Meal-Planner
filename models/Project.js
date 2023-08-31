@@ -13,7 +13,7 @@ Project.init(
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     description: {
       type: DataTypes.STRING,
@@ -25,7 +25,7 @@ Project.init(
     },
     needed_funding: {
       type: DataTypes.FLOAT,
-      allowNull: false,
+      allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
