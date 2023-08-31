@@ -7,7 +7,7 @@ Meal Planner is a web application designed to help users easily create and manag
 
 The site can be accessed [here](https://github.com/jonesmatr/Meal-Planner.git).
 
-![Meal Planner](./assets/img/Website-Screenshot.jpg)
+![Meal Planner](./public/img/Website-Screenshot.jpg)
 
 ## Table of Contents
 
