@@ -5,6 +5,10 @@
 
 Meal Planner is a web application designed to help users easily create and manage their meal plans. Users can add meals, set the day of the week, and write recipes, all in one place. The application also allows users to manage projects, each associated with different meals and plans.
 
+The site can be accessed [here](https://github.com/jonesmatr/Meal-Planner.git).
+
+![Meal Planner](./assets/img/Website-Screenshot.jpg)
+
 ## Table of Contents
 
 1. [Features](#features)
@@ -39,7 +43,7 @@ Meal Planner is a web application designed to help users easily create and manag
 1. Clone the repository:
 
     ```
-    git clone https://github.com/yourusername/meal-planner.git
+    git clone https://github.com/jonesmatr/Meal-Planner.git
     ```
 
 2. Navigate to the project directory:
