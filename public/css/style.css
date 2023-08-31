@@ -31,7 +31,11 @@ header, .project:not(:last-child) {
     color:rgba(1, 0, 0, 0.874);
   }
   
-  h1, h2, h3, h4, h5, h6 {
+  h1, h3, h4, h5, h6 {
     color:#cf0000a6;
+  }
+  
+  h2 {  /*login signup color*/
+    color:rgba(31, 22, 0, 0.874);
   }
   
