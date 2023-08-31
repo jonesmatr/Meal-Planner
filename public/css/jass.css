@@ -134,10 +134,6 @@ h1 {
   margin: 0.67em 0;
 }
 
-.goal-color {
-  /* color: #FF5733; Replace #FF5733 with your desired color */
-}
-
 
 /* Grouping content
    ========================================================================== */
@@ -471,10 +467,19 @@ body {
 
 .main-page {
   background-image: url('../img/front-pagebgimg.jpg');
-  background-size: cover;
-  background-position: center;
+  background-size: 50%;  /* Adjust this value to make the image smaller */
+  background-position: 90% center;  /* Adjust these values to move the image to the right */
+  background-repeat: no-repeat;
+
+  opacity: 9.6;
 }
 
+.horizontal-image {
+  width: 100%; /* Set the width to 100% of the container */
+  /* Add any other styles you want */
+}
+
+/*TEXT ADJUSTMENT OG*/
 
 h1,
 h2,
@@ -1293,12 +1298,14 @@ form [type='radio'] {
 .container {
   width: 85%;
   max-width: 1200px;
-  margin-left: auto;
+  padding-top: 33px;
+  margin-left: 60px;
   margin-right: auto;
 }
 
+
 .container.container-fluid {
-  width: 92%;
+  width: 52%;
 }
 
 /* FLEX CONTENT */
