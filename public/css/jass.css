@@ -59,9 +59,9 @@ main {
 
 /* Style for each project row */
 .project {
-  background-color: #f2f2f2;  /* Change this to your desired background color */
+  background-color: #c2a8000e;  /* Change this to your desired background color */
   border-radius: 10px;  /* Rounded corners */
-  padding: 1rem;  /* Padding inside the div */
+  padding: .7rem;  /* Padding inside the div */
   margin-bottom: 1rem;  /* Margin at the bottom for spacing between project divs */
 }
 
@@ -79,13 +79,17 @@ main {
 }
 
 
-/* Main Handlebars */
 .custom-login-link {
-  font-size: 24px;  /* Change the font size */
-  padding: 10px;    /* Add some padding */
-  padding-right: 92px;
-  /* color: rgba(0, 0, 255, 0.447);      Change the text color LOGIN  */
+  padding-right: 10px;
+  font-size: 24px;
 }
+
+.custom-signup-link {
+  padding-left: 5px;
+  font-size: 24px;
+  padding-right: 70px;
+}
+
 
 /* Style for the Current Projects section */
 .col-md-6:last-child {
@@ -171,7 +175,7 @@ a {
 }
 
 header {
-  background-color: #0a002325; /* Change to your desired color */
+  background-color: #ffffff; /* Change to your desired color */
 }
 
 
@@ -456,10 +460,38 @@ body {
   min-height: 100%;
 }
 
-.fading-corners {
-  border-radius: 15px;
-  box-shadow: 0 0 6px 6px rgba(251, 251, 251, 0.851);
+header-container {
+  position: relative;
 }
+
+.nav-container {
+  display: flex;
+  align-items: center; /* This will vertically center the items */
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 70px;
+  z-index: 2;
+}
+
+.small-navbar {
+  height: 75px;
+  display: flex;
+  align-items: center; /* This will vertically center the items */
+  font-size: 0.8rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 1;
+}
+
+.fading-corners {
+  border-radius: 5px;
+  box-shadow: 0 0 2px 2px rgba(251, 251, 251, 0.851);
+}
+
 
 
 body {
@@ -486,6 +518,7 @@ body {
   opacity: 0.6;
   padding: 20px;
   border: 5px solid transparent;
+  border-bottom: 2px solid #ffffff;  /* Add this line */
 }
 
 /* Add a background color to the main content so it's not transparent */

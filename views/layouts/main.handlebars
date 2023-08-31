@@ -18,24 +18,24 @@
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1 style="margin-left: 60px;">
-  <a href="/">
-   <img src="/img/logo.jpg" alt="Meal Planner Logo" class="fading-corners" style="height: 70px; margin-top: 20px;">
-
-  </a>
-</h1>
-
-      <nav>
-        <!-- Conditionally render login or logout links -->
+        <a href="/">
+          <img src="/img/logo.jpg" alt="Meal Planner Logo" class="logo fading-corners">
+        </a>
+      </h1>
+      <nav class="small-navbar nav-container">
         {{#if logged_in}}
-        <a href="/profile" class="custom-login-link" style="padding-right: 10px">profile</a> |
-        <a href="/login" class="custom-login-link">login</a>
+          <a href="/profile" class="custom-login-link">profile</a> |
+          <a href="/login" class="custom-login-link">login</a>
         {{else}}
-        <a href="/login" class="custom-login-link">login</a>
+          <a href="/login" class="custom-login-link">login</a> |
+          <a href="/login" class="custom-signup-link">sign up</a>
         {{/if}}
       </nav>
     </header>
 
-   <img src="/img/horizontal-img.jpg" alt="horizontal img" class="horizontal-image">
+   {{#if is_homepage}}
+      <img src="/img/horizontal-img.jpg" alt="horizontal img" class="horizontal-image">
+    {{/if}}
 
 
     <main class="container container-fluid mt-5">
