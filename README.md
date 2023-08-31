@@ -61,9 +61,9 @@ The site can be accessed [here](https://github.com/jonesmatr/Meal-Planner.git).
 4. Create a `.env` file to store your MySQL credentials and session secret:
 
     ```
-    DB_NAME='your_database_name'
-    DB_USER='your_mysql_username'
-    DB_PASSWORD='your_mysql_password'
+    DB_NAME='crowdfund_db'
+    DB_USER='root'
+    DB_PASSWORD=''
     SESSION_SECRET='your_session_secret'
     ```
 
@@ -88,15 +88,3 @@ The site can be accessed [here](https://github.com/jonesmatr/Meal-Planner.git).
 3. Use the form to create a new meal plan or project.
 4. View your existing meal plans and projects.
 5. Edit or delete meal plans and projects as needed.
-
-## Contributing
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch-name`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature-branch-name`).
-5. Create a new pull request.
-
-## License
-
-This project is licensed under the MIT License.
