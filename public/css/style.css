@@ -63,4 +63,6 @@ header, .project:not(:last-child) {
     z-index: 2;  /* Higher than the main content */
   }
 
-  
+  .nav-wrapper {
+    background-color: #ece7d1 !important;
+  }
