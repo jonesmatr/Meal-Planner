@@ -13,12 +13,11 @@
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <a href="/">
-      <img src="/img/logo.jpg" alt="Meal Planner Logo" class="fading-corners" style="height: 70px; margin-top: 20px;">
-      </h1>
+      
       <nav>
         <div class="nav-wrapper">
+          <a href="/">
+      <img src="/img/logo.jpg" alt="Meal Planner Logo" class="fading-corners" style="height: 70px; margin-top: 20px;">
         <!-- Conditionally render login or logout links -->
           <ul id="nav-mobile" class="right hide-on-med-and-down"></ul>
             {{#if logged_in}}
