@@ -13,21 +13,18 @@
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      
+      <h1>
+        <a href="/">
+      <img src="/img/logo.jpg" alt="Meal Planner Logo" class="fading-corners" style="height: 70px; margin-top: 20px;">
+      </h1>
       <nav>
-        <div class="nav-wrapper">
-          <a href="/">
-      <img src="/img/logo.jpg" alt="Meal Planner Logo" class="brand-logo" style="height: 70px; margin-top: 20px;">
         <!-- Conditionally render login or logout links -->
-          <ul id="nav-mobile" class="right hide-on-med-and-down"></ul>
-            {{#if logged_in}}
-            <li><a href="/profile">profile</a></li> |
-            <li><button class="waves-effect waves-light btn" id="logout">logout</button></li>
-            {{else}}
-            <li><a href="/login">login</a></li>
-            {{/if}}
-          </ul>
-        </div> 
+        {{#if logged_in}}
+        <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
       </nav>
     </header>
     <main class="container container-fluid mt-5">
@@ -42,7 +39,6 @@
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
-   <script type="text/javascript" src="js/materialize.min.js"></script>
   {{/if}}
 </body>
 
