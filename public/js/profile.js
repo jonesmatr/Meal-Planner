@@ -1,27 +1,3 @@
-// const newFormHandler = async (event) => {
-//     event.preventDefault();
-  
-//     const name = document.querySelector('#project-name').value.trim();
-//     const needed_funding = document.querySelector('#project-funding').value.trim();
-//     const description = document.querySelector('#project-desc').value.trim();
-
-//     if (name && needed_funding && description) {
-//         const response = await fetch(`/api/projects`, {
-//           method: 'POST',
-//           body: JSON.stringify({ name, needed_funding, description }),
-//           headers: {
-//             'Content-Type': 'application/json',
-//           },
-//         });
-    
-//         if (response.ok) {
-//           document.location.replace('/profile');
-//         } else {
-//           alert('Failed to create project');
-//         }
-//       }
-//     };
-
     // New Meal Plan Form Handler
     const newMealFormHandler = async (event) => {
     event.preventDefault();
@@ -32,11 +8,6 @@
   const recipe = document.querySelector('#meal-desc').value.trim();
 
   if (mealName && dayOfWeek && recipe) {
-    // const response = await fetch(`/api/projects`, {
-    //   method: 'POST',
-    //   body: JSON.stringify({ meal_name: mealName, day_of_week: dayOfWeek, recipe }),
-    //   headers: { 'Content-Type': 'application/json' },
-    // });
     const response = await fetch(`/api/projects`, {
       method: 'POST',
       body: JSON.stringify({ 
@@ -71,10 +42,29 @@
     }
   };
 
-// Attach the form submit event to the newProjectFormHandler function
-// if (document.querySelector('.new-project-form')) {
-//   document.querySelector('.new-project-form').addEventListener('submit', newFormHandler);
-// }
+  const mealLinks = document.querySelectorAll('.meal-link');
+
+mealLinks.forEach((link) => {
+  link.addEventListener('click', async (event) => {
+    event.preventDefault();
+    const recipe = link.getAttribute('data-meal');
+
+    // Fetch nutrient data from the API using recipe
+    try {
+      const response = await fetch(`https://api.edamam.com/api/food-database/v2/nutrients?mealDesc=${encodeURIComponent(recipe)}`);
+      if (!response.ok) {
+        throw new Error('API request failed');
+      }
+      const data = await response.json();
+
+      // Redirect to project page with captured data as URL parameter
+      window.location.href = `/project/{{project.id}}?mealDesc=${encodeURIComponent(recipe)}`;
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle error or show a message to the user
+    }
+  });
+});
 
 // Attach the delete button click event to the delButtonHandler function
 if (document.querySelector('.project-list')) {
