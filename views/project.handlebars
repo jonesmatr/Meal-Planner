@@ -13,17 +13,17 @@
 <div class="row">
     <div class="col s12">
       <div class="card blue-grey darken-1">
-        <div class="card-content white-text center-align">
-          <h2>{{meal_name}}</h2>
-          <p>{{{get_emoji}}}</p>
-          <h3>Recipe:</h2>
-          <p>{{recipe}}</p>
-          <p>Created by {{user.name}} on {{format_date date_created}}</p>
-          <p>
+        <div class="card-content white-text">
+          <h2 class="center-align">{{meal_name}}</h2>
+          <p class="center-align">{{{get_emoji}}}</p>
+          <h3 class="center-align">Recipe:</h2>
+          <p class="center-align">{{recipe}}</p>
+          <p class="center-align">Created by {{user.name}} on {{format_date date_created}}</p>
+          <p class="center-align">
             <span for="img" aria-label="money">🌮</span>
             <span class="dollar-amount">{{day_of_week}}</span>
           </p>
-          <p>
+          <p class="center-align">
             <button class="btn btn-primary">Make this for dinner tonight!</button>
           </p>        
         </div>
