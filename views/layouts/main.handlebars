@@ -20,6 +20,7 @@
       <img src="/img/logo.jpg" alt="Meal Planner Logo" class="fading-corners" style="height: 70px; margin-top: 20px;">
       </h1>
       <nav>
+        <div class="nav-wrapper #ece7d1">
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/profile">profile</a> |
@@ -27,6 +28,7 @@
         {{else}}
         <a href="/login">login</a>
         {{/if}}
+        </div>
       </nav>
     </header>
     <main class="container container-fluid mt-5">
