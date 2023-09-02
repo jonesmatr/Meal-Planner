@@ -90,6 +90,25 @@ main {
   padding-right: 70px;
 }
 
+.create-new-plan-box {
+  max-width: 40% !important;
+  padding: 1rem !important;
+  margin: auto !important;
+  box-sizing: border-box !important;
+  background-color: rgba(24, 10, 107, 0.1) !important;
+  border-radius: 15px !important;
+}
+
+.current-projects-box {
+  max-width: 40% !important;
+  padding: 1rem !important;
+  margin: auto !important;
+  box-sizing: border-box !important;
+  background-color: rgba(24, 10, 107, 0.1) !important;
+  border-radius: 15px !important;
+}
+
+/*************************************/
 
 /* Style for the Current Projects section */
 .col-md-6:last-child {
