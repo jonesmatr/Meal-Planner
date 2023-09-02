@@ -19,7 +19,7 @@ header, .project:not(:last-child) {
   }
   
   .dollar-amount {
-    color: #056605;
+    color: #ccc;
     font-weight: bold;
     margin-left: -5px;
   }
