@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+const axios = require('axios');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
@@ -36,6 +37,23 @@ app.use(session(sess));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+// Proxy route
+app.get('/proxy', async (req, res) => {
+  const { mealDesc, app_id, app_key } = req.query;
+  try {
+    const response = await axios.get(`https://api.edamam.com/api/food-database/v2/nutrients`, {
+      params: {
+        mealDesc,
+        app_id,
+        app_key,
+      },
+    });
+    res.json(response.data);
+  } catch (error) {
+    res.status(error.response ? error.response.status : 500).json({ error: 'Proxy request failed' });
+  }
+});
+
 
 
 app.use(express.json());
@@ -44,6 +62,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
