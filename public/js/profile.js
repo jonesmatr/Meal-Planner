@@ -50,7 +50,6 @@ mealLinks.forEach((link) => {
     const recipe = link.getAttribute('data-meal');
 
     // Fetch nutrient data from the API using recipe
-    // Show this to AI and see if this is correct*************
     try {
       const response = await fetch(`https://api.edamam.com/api/food-database/v2/nutrients?mealDesc=${encodeURIComponent(recipe)}`);
       if (!response.ok) {
@@ -66,6 +65,7 @@ mealLinks.forEach((link) => {
     }
   });
 });
+
 
 // Attach the delete button click event to the delButtonHandler function
 if (document.querySelector('.project-list')) {
