@@ -97,7 +97,7 @@ main {
     padding: 1rem;
     margin: auto;  /* Center the column */
     box-sizing: border-box;
-    background-color: rgba(32, 55, 232, 0.1);  /* White background with 80% opacity */
+    background-color: rgba(24, 10, 107, 0.1);  /* White background with 80% opacity */
     border-radius: 15px;  /* Rounded corners */
 }
 
@@ -108,7 +108,7 @@ main {
     padding: 1rem;
     margin: auto;  /* Center the column */
     box-sizing: border-box;
-    background-color: rgba(32, 55, 232, 0.1);  /* White background with 80% opacity */
+    background-color: rgba(24, 10, 107, 0.1);  /* White background with 80% opacity */
     border-radius: 15px;  /* Rounded corners */
 }
 
@@ -116,6 +116,7 @@ main {
 
 /* Adjust the size of the Create New Plan section */
 .col-md-6:first-child {
+  margin-top: 177px;  /* Increase this value to move the boxes down */
     flex: 1.5;  /* Increase the flex size */
     padding: 1rem;
     box-sizing: border-box;
@@ -123,6 +124,7 @@ main {
 
 /* Adjust the size of the Current Projects section */
 .col-md-6:last-child {
+  margin-top: 70px;
     flex: 1;  /* Keep the flex size as is or adjust as needed */
     padding: 1rem;
     box-sizing: border-box;
