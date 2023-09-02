@@ -4,7 +4,6 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
-const cors = require('cors');
 
 
 const sequelize = require('./config/connection');
@@ -37,8 +36,7 @@ app.use(session(sess));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-// Use the cors middleware to enable CORS
-app.use(cors());
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
