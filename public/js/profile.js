@@ -51,7 +51,7 @@ mealLinks.forEach((link) => {
 
     // Fetch nutrient data from the API using recipe
     try {
-      const response = await fetch(`https://api.edamam.com/api/food-database/v2/nutrients?mealDesc=${encodeURIComponent(recipe)}`);
+      const response = await fetch(`https://api.edamam.com/api/food-database/v2/nutrients?mealDesc=${encodeURIComponent(recipe)}&app_id=${43c8d25a}&app_key=${fc8aed09a004bddf3fe992f5935ab6fb}`);
       if (!response.ok) {
         throw new Error('API request failed');
       }
