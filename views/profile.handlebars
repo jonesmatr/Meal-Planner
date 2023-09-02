@@ -44,7 +44,7 @@
     {{#each projects as |project|}}
     <div class="jass-rowmb-2">
       <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.meal_name}}</a></h4>
+        <h4><a href="/project/{{project.id}}" class="meal-link" data-meal="{{project.recipe}}">{{project.meal_name}}</a></h4>
         <p>Day: {{project.day_of_week}}</p>
         <p>Recipe: {{project.recipe}}</p>
       </div>
