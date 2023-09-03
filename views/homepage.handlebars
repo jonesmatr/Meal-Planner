@@ -1,12 +1,16 @@
+<!-- NEW COMMENT: Added Menu Plan title with different font and margin-bottom -->
+<h1 style="margin-left: 0; margin-bottom: 50px; color: #000000; font-family: 'Courier New', Courier, monospace;">Menu Plan</h1> 
+
 <!-- Loop over each object in the projects array -->
 {{#each projects as |project| }}
-<div class="jass-row mb-4 project">
-  <div class="col-md-5">
-    <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/project/{{project.id}}">{{project.meal_name}}</a>
-    </h2>
+<div class="row mb-4 project z-depth-3" style="max-width: 70%; margin-left: -90px; background-color: #f7ebf62f"> <!-- NEW COMMENT: Added z-depth-2 for shadow -->
+  <div class="col s5"> <!-- NEW COMMENT: Changed from col-md-5 to col s5 for Materialize -->
+    <h2 style="margin-top: 20px; font-family: 'Arial', sans-serif;"> <!-- NEW COMMENT: Added top margin and changed font -->
+  <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+  {{{get_emoji}}}
+  <a href="/project/{{project.id}}">{{project.meal_name}}</a>
+</h2>
+
     <p>
       <span for="img" aria-label="money"></span> <!-- remove double emoji -->
       <!-- Pass needed_funding value to the helper function -->
@@ -14,10 +18,11 @@
     </p>
     <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
   </div>
-  <div class="col-md-7">
-    <p>
-      {{project.recipe}}
-    </p>
-  </div>
+  <div class="col s7"> <!-- NEW COMMENT: Changed from col-md-7 to col s7 for Materialize -->
+  <p style="margin-top: 20px;"> <!-- NEW COMMENT: Added top margin -->
+    {{project.recipe}}
+  </p>
+</div>
+
 </div>
 {{/each}}
