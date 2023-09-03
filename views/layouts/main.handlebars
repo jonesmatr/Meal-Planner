@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meal Planner</title>
-  
-  {{!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/> --}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
-
 <body>
   <div> <!--class="flex-column justify-space-around"-->
-    <header> <!--class="display-flex justify-space-between align-center p-2"-->
-      <h1>
-        <a href="/">
-      <img src="/img/logo.jpg" alt="Meal Planner Logo" class="fading-corners" style="height: 70px; margin-top: 20px;">
-      </h1>
-      <nav>
-        <div class="nav-wrapper">
-        <!-- Conditionally render login or logout links -->
-         <ul id="nav-mobile" class="right hide-on-med-and-down"></ul>
-            {{#if logged_in}}
-             
-            <a href="/profile" class="right">profile</a> |
-            <button class="no-button right" id="logout">logout</button>
+      <header> <!--class="display-flex justify-space-between align-center p-2"-->
+      <!-- NEW COMMENT: Added 'valign-wrapper' class for vertical alignment -->
+      <div class="nav-wrapper valign-wrapper">
+        <div class="left">
+          <!-- Empty div to maintain flexbox layout -->
+        </div>
+        <div class="center">
+          <!-- NEW COMMENT: Moved logo to the center div -->
+          <h1>
+            <a href="/">
+              <img src="/img/logo.jpg" alt="Meal Planner Logo" class="fading-corners" style="height: 140px;">
+            </a>
+          </h1>
+        </div>
+        <div class="right">
+          <!-- NEW COMMENT: Moved login/logout/profile links to the right -->
+           <ul id="nav-mobile" class="right-align" style="position: relative; top: 5px;">
+         {{#if logged_in}}
+              <!-- NEW COMMENT: Added Materialize classes and inline styles -->
+              <li class="right" style="margin-right: 40px; margin-top: 80px; "><a href="/profile" style="font-size: 20px;">Profile</a></li>
+              <li class="right" style="margin-right: 5px; margin-top: 104px;"> | </li>
+              <li class="right" style="margin-right: 10px; margin-top: 80px;"><a href="#" id="logout" style="font-size: 20px;">Logout</a></li>
             {{else}}
-            <li><a href="/login" class="right">login</a></li>
-            
+              <li class="right" style="margin-right: 10px; margin-top: 80px;"><a href="/login" style="font-size: 20px;">Login</a></li>
             {{/if}}
           </ul>
         </div>
-      </nav>
+      </div>
     </header>
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
     <footer>
-      
     </footer>
   </div>
 
