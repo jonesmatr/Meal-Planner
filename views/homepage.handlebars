@@ -1,9 +1,11 @@
-<!-- NEW COMMENT: Added Menu Plan title with different font and margin-bottom -->
-<h1 style="margin-left: 0; margin-bottom: 50px; color: #000000; font-family: 'Courier New', Courier, monospace;">Menu Plan</h1> 
+<!-- NEW COMMENT: Added a div with a background image and shadow -->
+<div style="background-image: url('/img/login-signup.png'); background-size: 40%; background-repeat: no-repeat; background-position: calc(100% + 0px) calc(0% + 40px); z-index: -1; position: relative; padding-bottom: 50%;">
 
+  <!-- NEW COMMENT: Added Menu Plan title with different font and margin-bottom -->
+  <h1 style="margin-left: 0; margin-bottom: 50px; color: #000000; font-family: 'Courier New', Courier, monospace; position: relative; z-index: 1;">Menu Plan</h1> 
 <!-- Loop over each object in the projects array -->
 {{#each projects as |project| }}
-<div class="row mb-4 project z-depth-3" style="max-width: 70%; margin-left: -90px; background-color: #f7ebf62f"> <!-- NEW COMMENT: Added z-depth-2 for shadow -->
+<div class="row mb-4 project z-depth-3" style="max-width: 55%; margin-left: -90px; background-color: #f7ebf62f; border-radius: 10px;"> <!-- NEW COMMENT: Added border-radius for rounded corners --> <!-- NEW COMMENT: Added z-depth-2 for shadow -->
   <div class="col s5"> <!-- NEW COMMENT: Changed from col-md-5 to col s5 for Materialize -->
     <h2 style="margin-top: 20px; font-family: 'Arial', sans-serif;"> <!-- NEW COMMENT: Added top margin and changed font -->
   <!-- Call helper function with triple brackets to render the emoji span as HTML -->
