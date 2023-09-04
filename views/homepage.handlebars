@@ -20,11 +20,10 @@
     </p>
     <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p>
   </div>
-  <div class="col s7"> <!-- NEW COMMENT: Changed from col-md-7 to col s7 for Materialize -->
-  <p style="margin-top: 20px;"> <!-- NEW COMMENT: Added top margin -->
+ <div class="col s7"> <!-- NEW COMMENT: Changed from col-md-7 to col s7 for Materialize -->
+  <p style="margin-top: 20px; overflow-wrap: break-word; max-height: 100px; overflow-y: auto;"> <!-- NEW COMMENT: Added styles for text wrapping and overflow -->
     {{project.recipe}}
   </p>
 </div>
-
 </div>
 {{/each}}
