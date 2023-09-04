@@ -1,4 +1,4 @@
-<div class="jass-row">
+{{!-- <div class="jass-row">
   <div class="col-auto">
     <h2>Welcome, {{name}}!</h2>
   </div>
@@ -44,9 +44,9 @@
     {{#each projects as |project|}}
     <div class="jass-row mb-2">
       <div class="col-md-8">
-        <h4><a href="/project/{{project.id}}">{{project.meal_name}}</a></h4>
+        <h4><a href="/project/{{project.id}}">{{project.meal_name}}</a></h4> --}}
         {{!-- <h4><a href="/project/{{project.id}}" class="meal-link" data-meal="{{project.recipe}}">{{project.meal_name}}</a></h4>     --}}
-        <p>Day: {{project.day_of_week}}</p>
+        {{!-- <p>Day: {{project.day_of_week}}</p>
         <p>Recipe: {{project.recipe}}</p>
       </div>
       <div class="col-md-4">
@@ -55,6 +55,79 @@
     </div>
     {{/each}}
   </div>
+{{/if}}
+
+</div>
+
+<script src="./js/profile.js"></script>
+ <script type="text/javascript" src="js/materialize.min.js"></script> --}}
+
+ <!-- NEW COMMENT: Centered the horizontal image using negative margin and added shadow -->
+<div class="row" style="margin-top: -23px;"> <!-- Adjust margin-top as needed -->
+  <div class="col s12">
+    <img src="/img/profile-image_top.png" alt="Description" style="width: 2000px; height: auto; margin-left: -450px; box-shadow: 0px 14px 8px rgba(0, 0, 0, 0.1);">
+  </div>
+</div>
+
+
+<div class="jass-row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class="jass-row mt-4">
+  <div class="col-md-6">
+    <h3>Create Meal Plan:</h3>
+
+  <form class="form new-meal-form">
+      <div class="form-group">
+        <label for="project-name">Meal Name:</label>
+        <input class="form-input" type="text" id="meal-name" name="meal-name" />
+      </div>
+      <div class="form-group">
+        {{!-- <label for="meal-plan">Day of the Week</label> --}}
+        <label for="day-of-week">Select a Day of the Week:</label>
+          <select class="form-input" id="day-of-week" name="day-of-week">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+        {{!-- <input class="form-input" type="number" id="meal-plan" name="meal-plan" /> --}}
+      </div>
+      <div class="form-group">
+        <label for="project-desc">Recipe:</label>
+        <textarea class="form-input" id="meal-desc" name="meal-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn-large">Create</button>
+      </div>
+    </form>
+    </div>  
+
+{{#if projects.length}}
+<div class="jass-row mt-4 project-list" style="margin-left: 150px;">
+  <div class="col s12 m6"> <!-- NEW COMMENT: Using Materialize's col class -->
+    <h3>Current Meal Plans:</h3>
+    {{#each projects as |project|}}
+    <div class="row" style="display: flex; align-items: flex-start;"> <!-- NEW COMMENT: Added flexbox -->
+      <div class="col s9" style="overflow-wrap: break-word; width: 300px;"> <!-- NEW COMMENT: Added fixed width -->
+        <h4 style="margin-top: 10px;"><a href="/project/{{project.id}}">{{project.meal_name}}</a></h4> <!-- NEW COMMENT: Added margin-top -->
+        <p style="margin-top: 10px;">Day: {{project.day_of_week}}</p> <!-- NEW COMMENT: Added margin-top -->
+        <p style="margin-top: 10px;">Recipe: {{project.recipe}}</p> <!-- NEW COMMENT: Text will wrap to new line -->
+      </div>
+      <div class="col s3" style="padding-left: 0; display: flex; align-items: flex-start;"> <!-- NEW COMMENT: Added flexbox -->
+        <button class="btn-small" style="margin-top: 10px;" data-id="{{project.id}}">DELETE</button> <!-- NEW COMMENT: Removed margin-left -->
+      </div>
+    </div>
+    <div class="divider" style="margin-top: -10px;"></div> <!-- NEW COMMENT: Added divider and moved it up -->
+    {{/each}}
+  </div>
+</div>
 {{/if}}
 
 </div>
