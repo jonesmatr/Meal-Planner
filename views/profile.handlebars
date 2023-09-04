@@ -62,8 +62,8 @@
 <script src="./js/profile.js"></script>
  <script type="text/javascript" src="js/materialize.min.js"></script> --}}
 
- <!-- NEW COMMENT: Centered the horizontal image using negative margin and added shadow -->
-<div class="row" style="margin-top: -23px;"> <!-- Adjust margin-top as needed -->
+ {{!-- <!-- NEW COMMENT: Centered the horizontal image using negative margin and added shadow --> --}}
+<div class="row" style="margin-top: -23px;"> 
   <div class="col s12">
     <img src="/img/profile-image_top.png" alt="Description" style="width: 2000px; height: auto; margin-left: -450px; box-shadow: 0px 14px 8px rgba(0, 0, 0, 0.1);">
   </div>
@@ -111,20 +111,20 @@
 
 {{#if projects.length}}
 <div class="jass-row mt-4 project-list" style="margin-left: 150px;">
-  <div class="col s12 m6"> <!-- NEW COMMENT: Using Materialize's col class -->
+  <div class="col s12 m6"> 
     <h3>Current Meal Plans:</h3>
     {{#each projects as |project|}}
-    <div class="row" style="display: flex; align-items: flex-start;"> <!-- NEW COMMENT: Added flexbox -->
-      <div class="col s9" style="overflow-wrap: break-word; width: 300px;"> <!-- NEW COMMENT: Added fixed width -->
-        <h4 style="margin-top: 10px;"><a href="/project/{{project.id}}">{{project.meal_name}}</a></h4> <!-- NEW COMMENT: Added margin-top -->
-        <p style="margin-top: 10px;">Day: {{project.day_of_week}}</p> <!-- NEW COMMENT: Added margin-top -->
-        <p style="margin-top: 10px;">Recipe: {{project.recipe}}</p> <!-- NEW COMMENT: Text will wrap to new line -->
+    <div class="row" style="display: flex; align-items: flex-start;"> 
+      <div class="col s9" style="overflow-wrap: break-word; width: 300px;"> 
+        <h4 style="margin-top: 10px;"><a href="/project/{{project.id}}">{{project.meal_name}}</a></h4> 
+        <p style="margin-top: 10px;">Day: {{project.day_of_week}}</p> 
+        <p style="margin-top: 10px;">Recipe: {{project.recipe}}</p> 
       </div>
-      <div class="col s3" style="padding-left: 0; display: flex; align-items: flex-start;"> <!-- NEW COMMENT: Added flexbox -->
-        <button class="btn-small" style="margin-top: 10px;" data-id="{{project.id}}">DELETE</button> <!-- NEW COMMENT: Removed margin-left -->
+      <div class="col s3" style="padding-left: 0; display: flex; align-items: flex-start;"> 
+        <button class="btn-small" style="margin-top: 10px;" data-id="{{project.id}}">DELETE</button> 
       </div>
     </div>
-    <div class="divider" style="margin-top: -10px;"></div> <!-- NEW COMMENT: Added divider and moved it up -->
+    <div class="divider" style="margin-top: -10px;"></div>
     {{/each}}
   </div>
 </div>
