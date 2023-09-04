@@ -42,34 +42,34 @@
     }
   };
 
-  const mealLinks = document.querySelectorAll('.meal-link');
+  // const mealLinks = document.querySelectorAll('.meal-link');
 
-mealLinks.forEach((link) => {
-  link.addEventListener('click', async (event) => {
-    event.preventDefault();
-    const recipe = link.getAttribute('data-meal');
+// mealLinks.forEach((link) => {
+//   link.addEventListener('click', async (event) => {
+//     event.preventDefault();
+//     const recipe = link.getAttribute('data-meal');
 
-    // Replace these placeholders with your actual API keys
-    const app_id = 'YOUR_APP_ID';
-    const app_key = 'YOUR_APP_KEY';
+//     // Replace these placeholders with your actual API keys
+//     const app_id = 'YOUR_APP_ID';
+//     const app_key = 'YOUR_APP_KEY';
 
-    // Fetch nutrient data from the API using recipe
-    try {
-      const response = await axios(`/proxy`, {
-        params: {
-          mealDesc: encodeURIComponent(recipe),
-          app_id,
-          app_key,
-        },
-      });
-      // Redirect to project page with captured data as URL parameter
-      window.location.href = `/project/{{project.id}}?mealDesc=${encodeURIComponent(recipe)}`;
-    } catch (error) {
-      console.error('Error:', error);
-      // Handle error or show a message to the user
-    }
-  });
-});
+//     // Fetch nutrient data from the API using recipe
+//     try {
+//       const response = await axios(`/proxy`, {
+//         params: {
+//           mealDesc: encodeURIComponent(recipe),
+//           app_id,
+//           app_key,
+//         },
+//       });
+//       // Redirect to project page with captured data as URL parameter
+//       window.location.href = `/project/{{project.id}}?mealDesc=${encodeURIComponent(recipe)}`;
+//     } catch (error) {
+//       console.error('Error:', error);
+//       // Handle error or show a message to the user
+//     }
+//   });
+// });
 
 
 // Attach the delete button click event to the delButtonHandler function
