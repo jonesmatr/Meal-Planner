@@ -66,3 +66,28 @@ header, .project:not(:last-child) {
   .nav-wrapper {
     background-color: #ece7d1 !important;
   }
+
+  #nav-mobile li a {
+    padding: 0 15px;
+    line-height: 70px; /* Same as the logo height */
+  }
+  
+  /* ChatGPT: Style for logout button */
+  #logout {
+    cursor: pointer;
+    color: #1b89bc;
+  }
+  
+  #logout:hover {
+    color: #065b83;
+    text-decoration: underline;
+  }
+
+  /* Your existing styles */
+
+/* NEW COMMENT: Added Materialize class overrides */
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
