@@ -64,7 +64,6 @@ The site can be accessed [here](https://github.com/jonesmatr/Meal-Planner.git).
     DB_NAME='crowdfund_db'
     DB_USER='root'
     DB_PASSWORD=''
-    SESSION_SECRET='your_session_secret'
     ```
 
 5. Initialize the database:
